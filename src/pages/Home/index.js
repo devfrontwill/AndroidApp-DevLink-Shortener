@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
+import { TouchableWithoutFeedback, Keyboard, KeyboardAvoidingView, Platform, Modal } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import StatusBarPage from "../../components/StatusBarPage";
+import ModalLink from "../../components/ModalLink";
 import Menu from "../../components/Menu";
 import { Feather } from '@expo/vector-icons';
 import {
@@ -10,44 +12,71 @@ import {
 
 
 export default function Home() {
+
+    const [input, setInput] = useState('');
+    const [modalVisible, setModalVisible] = useState(false);
+
+    function handleShortLink() {
+        //alert('URL DIGITADA: ' + input)
+        setModalVisible(true);
+        setInput('');
+    }
+
     return (
-        <LinearGradient
-            colors={['#1ddbb9', '#132742']}
-            style={{ flex: 1, justifyContent: 'center' }}
-        >
+        <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()} >
+            <LinearGradient
+                colors={['#1ddbb9', '#132742']}
+                style={{ flex: 1, justifyContent: 'center' }}
+            >
 
-            <StatusBarPage
-                barStyle='light-content'
-                backgroundColor='#1ddbb9'
-            />
+                <StatusBarPage
+                    barStyle='light-content'
+                    backgroundColor='#1ddbb9'
+                />
 
-            <Menu />
+                <Menu />
 
-            <ContainerLogo>
-                <Logo source={require('../../assets/logo.png')} resizeMode="contain" />
-            </ContainerLogo>
+                <KeyboardAvoidingView
+                    behavior={Platform.OS === 'android' ? 'padding' : 'position'}
+                    enabled
+                >
 
-            <ContainerContent>
+                    <ContainerLogo>
+                        <Logo source={require('../../assets/logo.png')} resizeMode="contain" />
+                    </ContainerLogo>
 
-                <Title>DevLink Shortener</Title>
-                <Subtitle>Digite ou cole seu link abaixo para encurtar:</Subtitle>
+                    <ContainerContent>
 
-                <ContainerInput>
-                    <BoxIcon>
-                        <Feather name="link" size={22} color="#FFF" />
-                    </BoxIcon>
-                    <Input
-                        placeholder="Digite/cole seu link aqui. . ."
-                        placeholderTextColor="white"
-                    />
-                </ContainerInput>
+                        <Title>DevLink Shortener</Title>
+                        <Subtitle>Digite ou cole seu link abaixo para encurtar:</Subtitle>
 
-                <ButtonLink>
-                    <ButtonText>Gerar Link</ButtonText>
-                </ButtonLink>
+                        <ContainerInput>
+                            <BoxIcon>
+                                <Feather name="link" size={22} color="#FFF" />
+                            </BoxIcon>
+                            <Input
+                                placeholder="Digite/cole seu link aqui. . ."
+                                placeholderTextColor="white"
+                                autoCapitalize="none"
+                                autoCorrect={false}
+                                keyboardType="url"
+                                value={input}
+                                onChangeText={(text) => setInput(text)}
+                            />
+                        </ContainerInput>
 
-            </ContainerContent>
+                        <ButtonLink onPress={handleShortLink} >
+                            <ButtonText>Gerar Link</ButtonText>
+                        </ButtonLink>
 
-        </LinearGradient>
+                    </ContainerContent>
+                </KeyboardAvoidingView>
+
+                <Modal visible={modalVisible} transparent animationType="slide" >
+                    <ModalLink onClose={ () => setModalVisible(false) } />
+                </Modal>
+
+            </LinearGradient>
+        </TouchableWithoutFeedback>
     )
 }
