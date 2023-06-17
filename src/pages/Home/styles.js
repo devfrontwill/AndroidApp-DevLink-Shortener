@@ -9,8 +9,9 @@ margin-top: ${ Platform.OS === 'ios' ? 35+'px' : 15+'px' };
 `;
 
 export const Logo = styled.Image`
-width: 150px;
-height: 150px;
+width: 160px;
+height: 160px;
+border-radius: 100px;
 `;
 
 export const ContainerContent = styled.View`

@@ -13,7 +13,7 @@ import {
     BoxIcon, Input, ButtonLink, ButtonText
 } from './styles';
 import api from "../../services/api";
-
+import { saveLink } from '../../utils/storeLinks';
 
 export default function Home() {
 
@@ -33,6 +33,8 @@ export default function Home() {
             setData(response.data);
             setModalVisible(true);
 
+            saveLink('@devshortenerkey', response.data);
+
             Keyboard.dismiss();
             setLoading(false);
             setInput('');
@@ -44,9 +46,6 @@ export default function Home() {
             setLoading(false);
 
         }
-
-
-
 
     }
 
