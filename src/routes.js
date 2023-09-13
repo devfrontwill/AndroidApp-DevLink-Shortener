@@ -15,6 +15,7 @@ function Routes() {
 
                 drawerStyle: {
                     marginTop: 16,
+                    backgroundColor: '#141a30',
                 },
 
                 drawerLabelStyle:{
@@ -23,6 +24,8 @@ function Routes() {
 
                 drawerActiveBackgroundColor: '#2ccbb9',
                 drawerActiveTintColor: '#FFF',
+                drawerInactiveTintColor: '#FFF',
+
             }}
         >
             <Drawer.Screen

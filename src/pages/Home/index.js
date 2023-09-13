@@ -52,7 +52,7 @@ export default function Home() {
     return (
         <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()} >
             <LinearGradient
-                colors={['#1ddbb9', '#132742']}
+                colors={['#000000', '#3533cd']}
                 style={{ flex: 1, justifyContent: 'center' }}
             >
 

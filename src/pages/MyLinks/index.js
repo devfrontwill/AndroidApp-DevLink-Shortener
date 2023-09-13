@@ -3,6 +3,7 @@ import { Modal, ActivityIndicator } from "react-native";
 import StatusBarPage from "../../components/StatusBarPage";
 import Menu from '../../components/Menu';
 import ListItem from '../../components/ListItem';
+import { LinearGradient } from 'expo-linear-gradient';
 import { Container, Title, ListLinks, WarningText, ContainerEmpty } from './styles';
 import { useIsFocused } from "@react-navigation/native";
 import { getLinksSave, deleteLink } from "../../utils/storeLinks";
@@ -39,40 +40,45 @@ export default function MyLinks() {
     }
 
     return (
-        <Container>
-            <StatusBarPage
-                barStyle='light-content'
-                backgroundColor='#132742'
-            />
-            <Menu />
+        <LinearGradient
+            colors={['#000000', '#3533cd']}
+            style={{ flex: 1, justifyContent: 'center' }}
+        >
+            <Container>
+                <StatusBarPage
+                    barStyle='light-content'
+                    backgroundColor='#132742'
+                />
+                <Menu />
 
-            <Title>Meus Links</Title>
+                <Title>Meus Links</Title>
 
-            { loading && (
-                <ContainerEmpty>
-                    <ActivityIndicator color="#FFF" size={25} />
-                </ContainerEmpty>
-            )}            
+                {loading && (
+                    <ContainerEmpty>
+                        <ActivityIndicator color="#FFF" size={25} />
+                    </ContainerEmpty>
+                )}
 
-            { !loading && links === 0 && (
-                <ContainerEmpty>
-                    <WarningText>Você não possui nenhum link salvo! </WarningText>
-                </ContainerEmpty>
-            )}      
+                {!loading && links === 0 && (
+                    <ContainerEmpty>
+                        <WarningText>Você não possui nenhum link salvo! </WarningText>
+                    </ContainerEmpty>
+                )}
 
-            <ListLinks
-                data={links}
-                keyExtractor={(item) => String(item.id)}
-                renderItem={({ item }) => <ListItem data={item} selectedItem={handleItem} deleteItem={handleDelete} />}
-                contentContainerStyle={{ paddingBottom: 20 }}
-                showsVerticalsScrollIndicator={false}
-            />
+                <ListLinks
+                    data={links}
+                    keyExtractor={(item) => String(item.id)}
+                    renderItem={({ item }) => <ListItem data={item} selectedItem={handleItem} deleteItem={handleDelete} />}
+                    contentContainerStyle={{ paddingBottom: 20 }}
+                    showsVerticalsScrollIndicator={false}
+                />
 
-            <Modal visible={modalVisible} transparent animationType="slide" >
-                <ModalLink onClose={() => setModalVisible(false)} data={data} />
-            </Modal>
+                <Modal visible={modalVisible} transparent animationType="slide" >
+                    <ModalLink onClose={() => setModalVisible(false)} data={data} />
+                </Modal>
 
-        </Container>
+            </Container>
+        </LinearGradient>
     )
 }
 
