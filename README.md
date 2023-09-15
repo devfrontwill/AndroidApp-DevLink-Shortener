@@ -10,7 +10,9 @@
  <a href="#user-content--licença">Licença</a>
 </p>
 
-  <img style="width:55%;" src="https://github.com/devfrontwill/devlink-shortenerapp/assets/106280899/2a5b1e89-cb00-4737-b447-2d19825e34d0" />
+
+  <img style="width: 300px;" src="https://github.com/devfrontwill/devlink-shortenerapp/assets/106280899/2a5b1e89-cb00-4737-b447-2d19825e34d0" />
+
 
 
 ## 💻 Sobre o projeto
