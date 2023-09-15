@@ -10,9 +10,9 @@
  <a href="#user-content--licença">Licença</a>
 </p>
 
-
+<div align="center">
   <img style="width: 300px;" src="https://github.com/devfrontwill/devlink-shortenerapp/assets/106280899/2a5b1e89-cb00-4737-b447-2d19825e34d0" />
-
+</div>
 
 
 ## 💻 Sobre o projeto
@@ -21,26 +21,41 @@ DevLink Shortener é uma aplicação desenvolvida para que o usuário possa obte
 
 *Aplicativo com fins didáticos* .
 
+
  ### Tela inicial do App :
- <img style="width:350px;" src="https://github.com/devfrontwill/devlink-shortenerapp/assets/106280899/10dd8349-1ccc-4e5a-93ba-84205a73ceb4"  />
+<div align="center">
+	 <img style="width:350px;" src="https://github.com/devfrontwill/devlink-shortenerapp/assets/106280899/10dd8349-1ccc-4e5a-93ba-84205a73ceb4"  />
+</div>
 
 ### Digite ou cole seu link a ser encurtado no input/campo indicado :
-<img style="width:350px;" src="https://github.com/devfrontwill/devlink-shortenerapp/assets/106280899/f6ad9253-0136-4808-afb6-ee7d239922a7" />
+ <div align="center">
+	<img style="width:350px;" src="https://github.com/devfrontwill/devlink-shortenerapp/assets/106280899/f6ad9253-0136-4808-afb6-ee7d239922a7" />
+ </div>
 
 ### Modal indicando que o link do usuario foi encurtado com opção para copiar com um click e compartilhar com amigos :
-<img style="width:350px;" src="https://github.com/devfrontwill/devlink-shortenerapp/assets/106280899/6942a051-03c0-410e-88a4-ee5cf0da4c75" />
+ <div align="center">
+	<img style="width:350px;" src="https://github.com/devfrontwill/devlink-shortenerapp/assets/106280899/6942a051-03c0-410e-88a4-ee5cf0da4c75" />
+ </div>
 
 ### Ao copiar seu link encurtado obtenha uma mensagem de confirmação :
-<img style="width:350px;" src="https://github.com/devfrontwill/devlink-shortenerapp/assets/106280899/de574186-2725-49a9-9320-0736158d72c9" />
+ <div align="center">
+	<img style="width:350px;" src="https://github.com/devfrontwill/devlink-shortenerapp/assets/106280899/de574186-2725-49a9-9320-0736158d72c9" />
+ </div>
 
 ### Opção de compartilhar com seus principais Apps com apenas um click :
-<img style="width:350px;" src="https://github.com/devfrontwill/devlink-shortenerapp/assets/106280899/f9332e8f-0617-4349-80da-e9fcbdf2f081" />
+ <div align="center">
+	<img style="width:350px;" src="https://github.com/devfrontwill/devlink-shortenerapp/assets/106280899/f9332e8f-0617-4349-80da-e9fcbdf2f081" />
+ </div>
 
 ### Deslize para o lado, para excluir um link salvo da sua lista :
-<img style="width:350px;" src="https://github.com/devfrontwill/devlink-shortenerapp/assets/106280899/3f2409cd-a782-4ef4-9a90-3896aeff2961" />
+ <div align="center">
+	<img style="width:350px;" src="https://github.com/devfrontwill/devlink-shortenerapp/assets/106280899/3f2409cd-a782-4ef4-9a90-3896aeff2961" />
+ </div>
 
 ### Menu estilo hamburguer clicavel e deslizavel na lateral :
-<img style="width:350px;" src="https://github.com/devfrontwill/devlink-shortenerapp/assets/106280899/cebf3bd7-06e1-4c6c-bb6a-454a3cfdf3e3" />
+ <div align="center">
+	<img style="width:350px;" src="https://github.com/devfrontwill/devlink-shortenerapp/assets/106280899/cebf3bd7-06e1-4c6c-bb6a-454a3cfdf3e3" />
+ </div>
 ---
 
 ## ⚙️ Funcionalidades :
